@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+
+    padding-inline: 10px;
+
+    /* background-color: #131b48; */
+    background-image: url(Ciel_etoile.jpg);
+    background-size: contain;
+}
+
+header {
+    margin-block: 20px;
+}
+
+main, .flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    max-width: 768px;
+    font-size: 1.5rem;
+    
+    padding: 10px 0px;
+    text-align: center;
+    /* background-color: #fff; */
+    color:beige;
+}
+
+h2 {
+    font-size: 0.8rem;
+}
+
+h2 span {
+    /* display: block; */
+    color: #ffa907;
+    text-transform: uppercase;
+}
+
+h2 a {
+    color:#ffa907;
+}
+
+/* h2 span {
+    display: block;
+    padding-inline: 30px;
+}
+
+h2 span:first-child {
+    padding-inline: 13px ;
+    text-transform: uppercase;
+} */
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.audio {
+    max-width: 300px;
+
+    position: relative;
+    display: flex;
+
+    margin-bottom: 10px;
+}
+
+.hide-right {
+    position: absolute;
+    width: 84.5%;
+    right: 0;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+    background-color: cadetblue;
+    border-right: 5px solid white;
+
+    cursor: pointer;
+}
+
+p {
+    color: #fff;
+}
+
+.petite-chouette {
+    background-color: #e16ee2;
+}
+
+.duc {
+    background-color: #777053;
+}
+
+.nord {
+    background-color: #7275de;
+}
+
+.ctn-img {
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.show-img {
+    right:0;
+    pointer-events: unset;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out 500ms;
+
+}
+
+.ctn-img img {
+    border-radius: 6px 0 0 6px;
+    border-bottom: 5px solid white; 
+    border: 7px solid white;
+}
+
+@media screen and (width > 768px) {
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+
+        max-width: 960px;
+        margin: auto;
+    }
+
+    /* h1 {
+        margin-bottom: 40px;
+    } */
+
+} 
