@@ -5,11 +5,14 @@
 }
 
 body {
+
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+
     font-family: system-ui;
 
-    padding-inline: 10px;
-
-    /* background-color: #131b48; */
+    background-color: #131b48;
     background-image: url(Ciel_etoile.jpg);
     background-size: contain;
 }
@@ -18,7 +21,38 @@ header {
     margin-block: 20px;
 }
 
-main, .flex-col-center {
+.bandeau {
+    width: 100%;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    /* background-color: #0387CD; Bleu LPO manque de contraste */
+    background-color: #0C7DCD;
+
+    overflow: hidden;
+}
+
+.bandeau span {
+    white-space: nowrap;
+    font-style: italic;
+    
+    animation: scroll 12s linear infinite reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+.bandeau span a {
+    color: white;
+}
+
+main, .flex-col-center, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +73,6 @@ h2 {
 }
 
 h2 span {
-    /* display: block; */
     color: #ffa907;
     text-transform: uppercase;
 }
@@ -47,17 +80,6 @@ h2 span {
 h2 a {
     color:#ffa907;
 }
-
-/* h2 span {
-    display: block;
-    padding-inline: 30px;
-}
-
-h2 span:first-child {
-    padding-inline: 13px ;
-    text-transform: uppercase;
-} */
-
 
 .flex {
     display: flex;
@@ -125,6 +147,34 @@ p {
     border-radius: 6px 0 0 6px;
     border-bottom: 5px solid white; 
     border: 7px solid white;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+   
+    margin-top: 10px;
+    padding-inline: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 14px;
+    background-color: #131b48b8;
+    /* background-color: #131b48; */
+}
+
+/* footer > a:first-child {
+    position: relative;
+    bottom: 1px;
+} */
+
+footer, footer a {
+    color: #8072df;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
 }
 
 @media screen and (width > 768px) {
