@@ -160,7 +160,7 @@ footer {
 
     font-size: 14px;
     background-color: ##131b486e;
-    
+    box-shadow: -5px 0 15px 5px #131b4885;    
 }
 
 .credits {
